@@ -1,0 +1,13 @@
+<h1 class="display-4">New Task</h1>
+<%= form_with model: @task, html: { class: "form" } do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_area :details, class: "form-control", rows: 3 %>
+  </div>
+  <%= f.submit "Create Task", class: "btn btn-primary" %>
+<% end %>
+<%= link_to "Back", tasks_path%>
